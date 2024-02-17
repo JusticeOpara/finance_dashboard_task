@@ -6,7 +6,12 @@ import PropTypes from "prop-types";
 
 const SaleItem = ({ name, timeAgo, amount }) => (
   <div className={styles.perSales}>
-    <div className={styles.profile}></div>
+    <div className={styles.profile}>
+    <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 36 36">
+      <path fill="currentColor" d="M30.61 24.52a17.16 17.16 0 0 0-25.22 0a1.51 1.51 0 0 0-.39 1v6A1.5 1.5 0 0 0 6.5 33h23a1.5 1.5 0 0 0 1.5-1.5v-6a1.51 1.51 0 0 0-.39-.98" 
+      className="clr-i-solid clr-i-solid-path-1"/>
+    <circle cx="18" cy="10" r="7" fill="currentColor" className="clr-i-solid clr-i-solid-path-2"/><path fill="none" d="M0 0h36v36H0z"/></svg>
+    </div>
     <span className="">
       <p>{name}</p>
       <p className={styles.subText}>{timeAgo}</p>
@@ -77,7 +82,7 @@ const Home = () => {
       </div>
 
       {/* monthly profit */}
-      <div className={styles.sec}>
+      <div className={styles.section2}>
         <DoughnutChart />
         <div className={styles.recentSales}>
           <div className={styles.subHeader}>

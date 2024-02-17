@@ -76,7 +76,7 @@
   flex-direction: column;
   display: flex;
 }
-.sec {
+.section2 {
   width: 800px;
   height: 100%;
  background-color: #f1eee4; 
@@ -116,7 +116,11 @@ padding-bottom: 24px;
   height: 40px;
   width: 40px;
  border-radius: 50%;
- background-color: #000;
+ background-color: #fff;
+ align-items: center;
+ display: flex;
+ justify-content: center;
+
 }
 .perSales{
   background: #f8f7f1;
