@@ -1,13 +1,13 @@
 import {Chart as ChartJS,} from 'chart.js/auto';
 import {  Line } from "react-chartjs-2";
-// import styles from "./LineChart.module.css"
+import styles from "./LineChart.module.css"
 
 import sourceData from "../../utils/sourceData.json"
 ChartJS.register();
 
 const LineChart = () => {
   return (
-    <div>
+    <div className={styles.LineChart}>
          <Line
           data={{
             labels: sourceData.map((data) => data.label),
@@ -15,14 +15,14 @@ const LineChart = () => {
               {
                 label: "Revenue",
                 data: sourceData.map((data) => data.revenue),
-                backgroundColor: "#064FF0",
-                borderColor: "#064FF0",
+                backgroundColor: "#c2c2c2",
+                borderColor: "#fff",
               },
               {
                 label: "Cost",
                 data: sourceData.map((data) => data.cost),
-                backgroundColor: "#FF3030",
-                borderColor: "#FF3030",
+                backgroundColor: "#f1eee4",
+                 borderColor: "black",
               },
             ],
           }}

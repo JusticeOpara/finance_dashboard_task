@@ -2,22 +2,53 @@
   display: flex;
   width: 100%;
 }
+
 .text {
   font-family: "Satoshi", sans-serif;
   font-size: 36px;
   font-weight: 500;
   line-height: normal;
 }
+
 .subText{
     font-family: "Satoshi", sans-serif;
     font-size: 16px;
     color: #a7afad;
 }
+
 .doughnutContainer{
 background: #fff;
-padding: 24px;
+padding: 36px;
 }
 
-::-webkit-progress-bar{
-    
+.progressContainer{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+width: 100%;
 }
+
+
+
+progress {
+  border: 1px solid;
+  color: #fff;
+}
+progress::-moz-progress-bar {
+ 
+  background: red;
+}
+
+progress::-webkit-progress-value {
+  background: #c1c1c1;
+  border-radius: 8px;
+}
+
+progress::-webkit-progress-bar {
+  
+  background: #f1eee4; 
+  border-radius: 8px;
+
+  
+}
+

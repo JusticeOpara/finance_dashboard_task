@@ -1,7 +1,6 @@
 .dashboard {
   width: 100%;
   height: 100%;
-  
   display: flex;
   flex-direction: row;
 }
@@ -37,13 +36,42 @@
   width: 100%;
   height: 30%;
   display: flex;
-  gap: 26px;
+  gap: 24px;
 }
-.record {
-  background: #fff;
+.lineChartContainer1{
+  background: #c6d0bc;
   border-radius: 32px;
   width: 100%;
-  padding: 30px;
+   padding: 30px; 
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+}
+.lineChartContainer2{
+  background: #f6d78b;
+  border-radius: 32px;
+  width: 100%;
+   padding: 30px; 
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+}
+.lineChartContainer3{
+  color: #000;
+  background: #a1a7fd;
+  border-radius: 32px;
+  width: 100%;
+   padding: 30px; 
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+}
+.lineChartContainer4{
+  background: #f1eee4;
+  color: #000;
+  border-radius: 32px;
+  width: 100%;
+   padding: 30px; 
   align-items: center;
   flex-direction: column;
   display: flex;
@@ -51,11 +79,7 @@
 .sec {
   width: 800px;
   height: 100%;
-  background-color: aqua;
-}
-.chart {
-  width: 75%;
-  background: gainsboro;
+ background-color: #f1eee4; 
 }
 .text {
   font-family: "Satoshi", sans-serif;
@@ -69,22 +93,95 @@
   color: #a7afad;
 }
 .num{
-    font-size: 48px;
-    font-weight: 800;
-   
+    font-size: 36px;
+    font-weight: 700;
 }
 .point{
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
+.recentSales{
+  width: 100%;
+  padding: 36px;
+  
+}
+.subHeader{
+ display: flex;
+align-items: center;
+justify-content: space-between;
+padding-bottom: 24px;
+}
+.profile{
+  height: 40px;
+  width: 40px;
+ border-radius: 50%;
+ background-color: #000;
+}
+.perSales{
+  background: #f8f7f1;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-radius: 24px;
+
+}
+:hover.perSales{
+  background-color: #fff;
+}
+.sales{
+display: flex;
+flex-direction: column;
+gap: 8px;
+}
+
 
 @media only screen and (max-width: 767px) {
   /* Styles for mobile phones */
+  .dashboard {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    
+  }
+  .dataRecord {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+  }
+  .sec {
+    width: 100%;
+    height: 100%;
+    
+  }
 }
+
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   /* Styles for tablets */
+  .dashboard {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    
+  }
+  .dataRecord{
+    display: grid ;
+    grid-template-columns: 2fr 2fr;
+   place-content: center; 
+    place-items: center;
+  }
+
 }
+
+
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   /* Styles for small laptops and desktops */
   .dashboard {
@@ -92,10 +189,10 @@
     flex-direction: column;
     width: 100%;
     height: 100%;
-    background: red;
   }
-  .section1{
-    background-color:greenyellow;
+  
+  .sec{
+    width: 100%;
   }
   
   
@@ -103,38 +200,19 @@
 @media only screen and (min-width: 1200px) {
   /* Styles for large laptops and desktops */
   .dashboard{
-
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row
   }
   .section1{
-    background-color: aqua;
+    /* background-color: aqua; */
   }
   .dataRecord{
-    width: 50px;
     display: grid ;
     grid-template-columns: 2fr 2fr;
-    place-content: center;
+   place-content: center; 
+    place-items: center;
   }
-}
-
-
-@media (max-width:480px) {
-    .dashboard {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 100%;
-        background: red;
-      }
-      .dataRecord {
-        width: 100%;
-        height: 30%;
-        display: flex;
-        flex-direction: column;
-        gap: 26px;
-      }
-      .sec {
-        width: 100%;
-        height: 100%;
-        background-color: aqua;
-      }
+  
 }

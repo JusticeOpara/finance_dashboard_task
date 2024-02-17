@@ -33,6 +33,7 @@ const DoughnutChart = () => {
             },
           }}
         />
+        <div className={styles.progressContainer}>
         <div>
           <span>
             <p className={styles.subText}>Stocks</p>
@@ -46,17 +47,27 @@ const DoughnutChart = () => {
 
           <span>
             <p className={styles.subText}>Real Estate</p>
-            <progress value={65} max={100} />
+            <progress value={65} max={100} className={styles.progress} />
           </span>
+         
+        </div>
+        <div>
           <span>
             <p className={styles.subText}>Cash</p>
-            <progress value={65} max={100} />
+            <progress value={35} max={100} />
           </span>
           <span>
             <p className={styles.subText}>Cryptocurrency</p>
             <progress value={65} max={100} />
           </span>
+          <span>
+            <p className={styles.subText}>Shares</p>
+            <progress value={40} max={100} />
+          </span>
+          </div>
         </div>
+
+          
       </div>
     </div>
   );
