@@ -30,15 +30,17 @@ const BarChart = () => {
 
   useEffect(() => {
     setChartData({
-        labels: ['Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat', 'Sun'],
+      
+     labels: ["January", "February", "March", "April", "May", "June","July"],
+
         datasets: [
             {
                 label: 'Expenses',
-                
-                data: [50, 222, 194, 179, 241, 178, 224],
+                data: [300, 400, 420, 480, 430, 460,400,],
+                // data: [50, 222, 194, 179, 241, 178, 224],
                 borderColor: '#f1eee4',
                 backgroundColor: '#2c2c2c',
-                borderRadius:8,
+                borderRadius:10,
               }, 
              
         ]
@@ -50,7 +52,7 @@ const BarChart = () => {
             },
             title: {
                 display: true,
-                text: 'Daily Revenue'
+                text: 'Mothly Revenue'
             }
         },
         maintainAspectRatio: false,
@@ -62,7 +64,6 @@ const BarChart = () => {
   return (
     
       <div className={styles.BarChart}
-    //   className='w-full md:col-span-2 relative lg:h-[70vh] h-[50vh] m-auto p-4 border rounded-lg bg-white'
       >
         <Bar data={chartData} options={chartOptions} />
       </div>

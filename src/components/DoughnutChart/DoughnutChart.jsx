@@ -48,6 +48,14 @@ const DoughnutChart = () => {
             <p className={styles.subText}>Real Estate</p>
             <progress value={65} max={100} />
           </span>
+          <span>
+            <p className={styles.subText}>Cash</p>
+            <progress value={65} max={100} />
+          </span>
+          <span>
+            <p className={styles.subText}>Cryptocurrency</p>
+            <progress value={65} max={100} />
+          </span>
         </div>
       </div>
     </div>

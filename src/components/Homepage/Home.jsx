@@ -29,7 +29,7 @@ const Home = () => {
           </div>
           <div className={styles.record}>
             <span className={styles.point}>
-              <p className={styles.subText}>Balance</p>
+              <p className={styles.subText}>Savings</p>
 
               <p>+17%</p>
             </span>
@@ -38,13 +38,23 @@ const Home = () => {
           </div>
           <div className={styles.record}>
             <span className={styles.point}>
-              <p className={styles.subText}>Balance</p>
+              <p className={styles.subText}>Income</p>
 
               <p>+17%</p>
             </span>
             <p className={styles.num}>$56,874</p>
             <LineChart />
           </div>
+          <div className={styles.record}>
+            <span className={styles.point}>
+              <p className={styles.subText}>Expenses</p>
+
+              <p>+17%</p>
+            </span>
+            <p className={styles.num}>$56,874</p>
+            <LineChart />
+          </div>
+          
         </div>
 
         <BarChart />
