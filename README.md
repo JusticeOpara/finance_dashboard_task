@@ -1,6 +1,6 @@
 # Financial Dashboard Task
 
-dynamic and interactive financial dashboard for a web-based fintech application. The dashboard will serve as a central hub for users to monitor their financial health, including investments, savings, expenses, and more.
+Developed a sophisticated and interactive financial dashboard featuring a refined user interface, providing users with a centralized platform for monitoring and optimizing their financial well-being. The dashboard offers clear, interactive, and engaging visualizations of key financial data, including investments, savings, and expenses.
 
 ## Prerequisites
 
@@ -22,19 +22,4 @@ dynamic and interactive financial dashboard for a web-based fintech application.
 
 ✅  -   Fully Responsive & Rich User Interface and Experience Design <br>
 📈  -   Chart & Financial Data <br>
-🔎  -   Instant Searching and Pagination Feature
-
-## Further Improvements
-
-- Implement feature to enable back-tracking habits from the past, with streak remaining unchanged.
-- Implement better error handling throughout the app.
-- Add unit tests to verify core functionalities.
-- Implement UI to handle empty states or errors gracefully.
-
-## Conclusion and Personal Take on this project
-
--- I coded this with pure HTML, CSS, and JS <br>
--- For the chart functionality, I used ChartJS for charting framework <br>
--- I stored the dummy data on a JSON variable, which you can find inside the <script></script> tags... <br>
--- This won't be possible with the help of my senpai and ChatGPT... <br>
--- Soon, I will make this in a ReactJS version!
+🚀  -   Performance & Accessibility
