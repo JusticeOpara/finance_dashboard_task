@@ -1,0 +1,23 @@
+.DoughnutChart {
+  display: flex;
+  width: 100%;
+}
+.text {
+  font-family: "Satoshi", sans-serif;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: normal;
+}
+.subText{
+    font-family: "Satoshi", sans-serif;
+    font-size: 16px;
+    color: #a7afad;
+}
+.doughnutContainer{
+background: #fff;
+padding: 24px;
+}
+
+::-webkit-progress-bar{
+    
+}

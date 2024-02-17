@@ -1,0 +1,103 @@
+.dashboard {
+  width: 100%;
+  height: 100%;
+  /* background: gray; */
+  display: flex;
+  flex-direction: row;
+}
+.section1 {
+  width: 100%;
+  height: 100%;
+  background: #f8f7f1;
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 46px;
+}
+
+.searchbar {
+  width: 50%;
+  height: 40px;
+  border-radius: 6px;
+  outline: none;
+  border: 1px solid;
+  font-size: 24px;
+  padding-left: 12px;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dataRecord {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  gap: 26px;
+}
+.record {
+  background: #fff;
+  border-radius: 32px;
+  width: 100%;
+  padding: 30px;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+}
+.sec {
+  width: 800px;
+  height: 100%;
+  background-color: aqua;
+}
+.chart {
+  width: 75%;
+  background: gainsboro;
+}
+.text {
+  font-family: "Satoshi", sans-serif;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: normal;
+}
+.subText {
+  font-family: "Satoshi", sans-serif;
+  font-size: 16px;
+  color: #a7afad;
+}
+.num{
+    font-size: 48px;
+    font-weight: 800;
+   
+}
+.point{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+@media (max-width:480px) {
+    .dashboard {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        background: red;
+      }
+      .dataRecord {
+        width: 100%;
+        height: 30%;
+        display: flex;
+        flex-direction: column;
+        gap: 26px;
+      }
+      .sec {
+        width: 100%;
+        height: 100%;
+        background-color: aqua;
+      }
+}

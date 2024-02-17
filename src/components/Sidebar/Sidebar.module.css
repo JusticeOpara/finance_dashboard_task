@@ -1,0 +1,8 @@
+.sidebar{
+    background: #ca3030;
+    width:500px ;
+    height: 100%;
+    box-shadow: 8px;
+
+    /* w-[296px] h-[1024px] shadow flex flex-col items-center justify-between overflow-overlay max-sm:hidden */
+}
