@@ -6,3 +6,10 @@
   font-family: "Satoshi", sans-serif;
 
 }
+.dark  {
+  --color-bg-primary:#17171a;
+}
+
+.light{
+  --color-bg-primary: #ffffff;
+}

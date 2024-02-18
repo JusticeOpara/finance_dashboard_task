@@ -141,6 +141,9 @@ display: flex;
 flex-direction: column;
 gap: 8px;
 }
+.switch{
+  display: none;
+}
 
 
 @media only screen and (max-width: 767px) {
@@ -159,10 +162,9 @@ gap: 8px;
     flex-direction: column;
     gap: 26px;
   }
-  .sec {
+  .section2 {
     width: 100%;
     height: 100%;
-    
   }
 }
 

@@ -3,14 +3,35 @@ import DoughnutChart from "../DoughnutChart/DoughnutChart";
 import LineChart from "../LineChart/LineChart";
 import styles from "./Home.module.css";
 import PropTypes from "prop-types";
+import { changeTheme } from "../../store/themeSlice";
+import { useSelector, useDispatch } from "react-redux";
+import { useEffect, useState } from "react";
+import {Switch} from 'antd'
+
 
 const SaleItem = ({ name, timeAgo, amount }) => (
   <div className={styles.perSales}>
     <div className={styles.profile}>
-    <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 36 36">
-      <path fill="currentColor" d="M30.61 24.52a17.16 17.16 0 0 0-25.22 0a1.51 1.51 0 0 0-.39 1v6A1.5 1.5 0 0 0 6.5 33h23a1.5 1.5 0 0 0 1.5-1.5v-6a1.51 1.51 0 0 0-.39-.98" 
-      className="clr-i-solid clr-i-solid-path-1"/>
-    <circle cx="18" cy="10" r="7" fill="currentColor" className="clr-i-solid clr-i-solid-path-2"/><path fill="none" d="M0 0h36v36H0z"/></svg>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="1.5em"
+        height="1.5em"
+        viewBox="0 0 36 36"
+      >
+        <path
+          fill="currentColor"
+          d="M30.61 24.52a17.16 17.16 0 0 0-25.22 0a1.51 1.51 0 0 0-.39 1v6A1.5 1.5 0 0 0 6.5 33h23a1.5 1.5 0 0 0 1.5-1.5v-6a1.51 1.51 0 0 0-.39-.98"
+          className="clr-i-solid clr-i-solid-path-1"
+        />
+        <circle
+          cx="18"
+          cy="10"
+          r="7"
+          fill="currentColor"
+          className="clr-i-solid clr-i-solid-path-2"
+        />
+        <path fill="none" d="M0 0h36v36H0z" />
+      </svg>
     </div>
     <span className="">
       <p>{name}</p>
@@ -26,15 +47,43 @@ SaleItem.propTypes = {
 };
 
 const Home = () => {
+  const themeMode = useSelector((state) => state.theme.themeMode);
+
+  const dispatch = useDispatch();
+  const [theme, setTheme] = useState(null);
+
+  const handleThemeChange = (value) => {
+    const mode = value ? "dark" : "light";
+
+    localStorage.setItem("themeMode", JSON.stringify(mode));
+    setTheme(mode);
+  };
+
+  useEffect(() => {
+    let currentTheme = JSON.parse(localStorage.getItem("themeMode"));
+    console.log(currentTheme, "--currentTheme");
+
+    dispatch(changeTheme(currentTheme ? currentTheme : "light"));
+  }, [theme]);
+  
   return (
     <div className={styles.dashboard}>
-     
       <div className={styles.section1}>
         <div className={styles.header}>
           <div>
             <p className={styles.text}>Dashoard</p>
             <p className={styles.subText}>Payments Update</p>
           </div>
+          <div className={styles.switch}>
+            <Switch
+              checked={themeMode === "dark"}
+              onChange={handleThemeChange}
+              checkedChildren="Dark"
+              unCheckedChildren="Light"
+              className=" bg-black"
+            /> 
+          </div>
+
 
           <input className={styles.searchbar} placeholder="Search" />
         </div>
